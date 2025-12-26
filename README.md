@@ -1,6 +1,7 @@
 # Home Assistant
 Пример конфигурации Home Assistant.
 
+# Preview
 | ![](./screenshots/home.jpg) |
 |:--:|
 
