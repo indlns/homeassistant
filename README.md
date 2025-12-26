@@ -49,3 +49,5 @@
 
 # Themes
 - Material You with Utilities
+
+# Other
