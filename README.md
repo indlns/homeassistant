@@ -1,6 +1,9 @@
 # Home Assistant
 Пример конфигурации Home Assistant.
 
+| ![](./screenshots/home.jpg) |
+|:--:|
+
 # Integrations
 ## HACS
 - Yandex Intents
