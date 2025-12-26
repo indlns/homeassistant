@@ -1,0 +1,8 @@
+loggerservice:
+  logger:
+    default: warning
+    logs:
+      homeassistant.components.mqtt: error
+      homeassistant.components.webhook: error
+      homeassistant.components.ollama: error
+      homeassistant.components.spotify: error

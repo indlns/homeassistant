@@ -1,0 +1,25 @@
+custompanels:
+  panel_custom:
+    - name: server_state
+      sidebar_title: 'System'
+      sidebar_icon: mdi:server
+      js_url: /api/hassio/app/entrypoint.js
+      url_path: 'hassio/system'
+      embed_iframe: true
+      require_admin: true
+      config:
+        ingress: core_configurator
+    - name: automations
+      sidebar_title: 'Автоматизации'
+      sidebar_icon: mdi:robot
+      js_url: /api/hassio/app/entrypoint.js
+      url_path: 'config/automation/dashboard'
+      embed_iframe: true
+      require_admin: true
+      config:
+        ingress: core_configurator
+    - name: material-you-panel
+      url_path: material-you-configuration
+      sidebar_title: Material You Utilities
+      sidebar_icon: mdi:material-design
+      module_url: /hacsfiles/material-you-utilities/material-you-utilities.min.js

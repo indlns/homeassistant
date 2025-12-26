@@ -1,0 +1,9 @@
+authopenid:
+  openid:
+    client_id: !secret openid_client_id
+    client_secret: !secret openid_client_secret
+    configure_url: !secret openid_configure_url
+    username_field: "preferred_username"  # Adjust based on your IdP's user info response
+    scope: "openid profile email"
+    block_login: false
+    openid_text: "Войти с помощью Authentik"  # Text to display on the login page

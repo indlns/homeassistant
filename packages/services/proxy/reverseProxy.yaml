@@ -1,0 +1,9 @@
+reverseproxy:
+  http:
+    use_x_forwarded_for: true
+    trusted_proxies:
+      - 10.16.68.3
+      - 10.16.68.0/24
+      - 192.168.0.0/24
+    ip_ban_enabled: true
+    login_attempts_threshold: 5

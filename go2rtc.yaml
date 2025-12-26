@@ -1,0 +1,10 @@
+streams:
+  aqara_g4:
+    - hass:Видеозвонок
+    - ffmpeg:aqara_g4#audio=aac#audio=opus
+  aqara_g3:
+    - hass:Камера
+    - ffmpeg:aqara_g3#audio=aac#audio=opus
+webrtc:
+  listen: ":8555"
+  ipv6: false
