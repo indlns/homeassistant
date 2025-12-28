@@ -9,11 +9,20 @@ custompanels:
       require_admin: true
       config:
         ingress: core_configurator
-    - name: automations
-      sidebar_title: 'Автоматизации'
+    - name: ha_integ
+      sidebar_title: 'Устройства и службы'
+      sidebar_icon: mdi:devices
+      js_url: /api/hassio/app/entrypoint.js
+      url_path: 'config/integrations'
+      embed_iframe: true
+      require_admin: true
+      config:
+        ingress: core_configurator  
+    - name: ha_auto
+      sidebar_title: 'Автоматизации и сцены'
       sidebar_icon: mdi:robot
       js_url: /api/hassio/app/entrypoint.js
-      url_path: 'config/automation/dashboard'
+      url_path: 'config/automation'
       embed_iframe: true
       require_admin: true
       config:
