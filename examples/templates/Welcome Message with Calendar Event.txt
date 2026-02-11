@@ -1,0 +1,41 @@
+{% set hour = now().hour %}
+
+{# --- Приветствие --- #}
+{% if 6 <= hour < 12 %}
+  {% set greeting = 'Доброе утро' %}
+{% elif 12 <= hour < 17 %}
+  {% set greeting = 'Добрый день' %}
+{% elif 17 <= hour < 23 %}
+  {% set greeting = 'Добрый вечер' %}
+{% else %}
+  {% set greeting = 'Пора спать' %}
+{% endif %}
+
+{# --- Календарь --- #}
+{% set now_ts = now().timestamp() %}
+{% set today_date = now().date() %}
+{% set tomorrow_date = (now() + timedelta(days=1)).date() %}
+
+{% set next_start_raw = state_attr('calendar.rabochii_grafik', 'start_time') %}
+{% set next_event_name = state_attr('calendar.rabochii_grafik', 'message') %}
+
+{% if next_start_raw is none %}
+  {% set cal_message = "У вас нет ближайших событий. Отличного отдыха 🥳" %}
+{% else %}
+  {% set next_dt = next_start_raw | as_datetime %}
+  {% set next_time = next_dt.strftime("%H:%M") %}
+  {% set next_date = next_dt.date() %}
+  {% set next_date_str = next_dt.strftime("%d.%m") %}
+
+  {% if next_date == today_date %}
+    {% set cal_message = "На сегодня запланировано — «" ~ next_event_name ~ "» в " ~ next_time %}
+  {% elif next_date == tomorrow_date %}
+    {% set cal_message = "На завтра запланировано — «" ~ next_event_name ~ "» в " ~ next_time %}
+  {% else %}
+    {% set cal_message = "Следующее событие — «" ~ next_event_name ~ "» " ~ next_date_str ~ " в " ~ next_time %}
+  {% endif %}
+{% endif %}
+
+{# --- Итоговый вывод --- #}
+# {{ greeting }}, {{ user }}!
+Сейчас {{ now().strftime("%H:%M") }}. {{ cal_message }}.

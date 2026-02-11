@@ -1,0 +1,3 @@
+prometheusmetrics:
+  prometheus:
+    namespace: homeassistant

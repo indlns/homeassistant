@@ -1,0 +1,7 @@
+{% set count = states('sensor.kolichestvo_vkliuchennogo_osveshcheniia') | int %}
+
+# 💡 Освещение
+{{ "Сейчас все светильники выключены" if count == 0 else
+   "В данный момент у вас включен {} светильник".format(count) if count == 1 else
+   "В данный момент у вас включено {} светильника".format(count) if 2 <= count <= 4 else
+   "В данный момент у вас включено {} светильников".format(count) }}

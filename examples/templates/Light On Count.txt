@@ -1,0 +1,15 @@
+{% set AREAS = ['hallway','bathroom','desktop','bedroom','kitchen'] %}
+{% set DOMAIN = 'light' %}
+{% set EXCLUDE = [''] %}
+
+{% set ns = namespace(ids=[]) %}
+{% for a in AREAS %}
+  {% set ns.ids = ns.ids + area_entities(a) %}
+{% endfor %}
+
+{{ expand(ns.ids | unique)
+   | rejectattr('entity_id', 'in', EXCLUDE)
+   | selectattr('domain','equalto', DOMAIN)
+   | selectattr('state','equalto','on')
+   | list
+   | count }}

@@ -1,0 +1,5 @@
+customrecorder:
+  recorder:
+    db_url: !secret db_link
+    purge_keep_days: 30
+    auto_purge: true

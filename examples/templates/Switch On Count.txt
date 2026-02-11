@@ -1,0 +1,11 @@
+{% set areas = ['hallway','bathroom','desktop','bedroom','kitchen'] %}
+
+{% set ents = expand(areas | map('area_entities') | sum(start=[])) %}
+
+{% set switches_on = ents
+    | selectattr('domain', 'equalto', 'switch')
+    | selectattr('state',  'equalto', 'on')
+    | list
+%}
+
+{{ switches_on | count }}

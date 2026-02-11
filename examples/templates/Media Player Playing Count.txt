@@ -1,0 +1,11 @@
+{% set areas = ['hallway','bathroom','desktop','bedroom','kitchen'] %}
+
+{% set ents = expand(areas | map('area_entities') | sum(start=[])) %}
+
+{% set playing = ents
+    | selectattr('domain', 'equalto', 'media_player')
+    | selectattr('state',  'equalto', 'playing')
+    | list
+%}
+
+{{ playing | count }}
