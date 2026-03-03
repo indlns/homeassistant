@@ -16,3 +16,4 @@
 /www
 /zigbee2mqtt
 known_devices.yaml
+.matrix.conf

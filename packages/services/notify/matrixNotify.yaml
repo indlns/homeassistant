@@ -1,0 +1,10 @@
+matrixnotify:
+  matrix:
+    homeserver: !secret matrix_homeserver
+    username: !secret matrix_username
+    password: !secret matrix_password
+    rooms:
+      - !secret matrix_room
+    commands:
+      - word: hello
+        name: hello
