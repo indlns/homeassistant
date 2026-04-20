@@ -1,0 +1,4 @@
+shellcommand:
+  shell_command:
+    reboot_domophone: 
+      !secret reboot_domophone
