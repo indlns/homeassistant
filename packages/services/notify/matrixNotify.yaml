@@ -8,3 +8,9 @@ matrixnotify:
     commands:
       - word: hello
         name: hello
+        rooms:
+          - !secret matrix_room
+      - expression: "My name is (?P<name>.*)"
+        name: introduction
+      - reaction: 👍
+        name: thumbsup
