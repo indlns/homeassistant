@@ -1,2 +1,0 @@
-reboot_domophone: 
-  'curl --digest -u admin:ryfnUz-judbig-behna4 "http://192.168.0.206/device_reboot"'

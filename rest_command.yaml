@@ -1,6 +1,0 @@
-n8n_webhook_obsidian:
-  url: !secret n8n_webhook_obsidian_url
-  method: POST
-  content_type: "application/json"
-  payload: '{"entity":"{{entity}}","state":"{{state}}","message":"{{message}}","time":"{{time}}"}'
-  verify_ssl: false
