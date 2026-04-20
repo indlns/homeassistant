@@ -1,20 +1,31 @@
-/.HA_VERSION
-/.cloud
-/.ha_run.lock
-/.storage
-/automations.yaml
-/blueprints
-/custom_components
-/deps
-/home-assistant.log.fault
-/home-assistant_v2.db
-/html5_push_registrations.conf
-/image
-/scenes.yaml
-/secrets.yaml
-/tts
-/www
-/zigbee2mqtt
-known_devices.yaml
-.matrix.conf
-/.cache
+# -----------------------------
+# Service data, cache, uploads
+# -----------------------------
+
+**/.cache
+**/.cloud
+**/.storage
+**/.HA_VERSION
+**/blueprints
+**/custom_components
+**/image
+**/tts
+**/www
+**/zigbee2mqtt
+**/deps
+
+# -----------------------------
+# Database dumps / configs
+# -----------------------------
+
+**/.ha_run.lock
+**.matrix.conf
+**/automations.yaml
+**/home-assistant.log.fault
+**/html5_push_registrations.conf
+**/home-assistant_v2.db
+**/ip_bans.yaml
+**/scenes.yaml
+**/scripts.yaml
+**/secrets.yaml
+**/known_devices.yaml
