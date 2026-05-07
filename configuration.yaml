@@ -8,6 +8,8 @@ frontend:
   themes: !include_dir_merge_named themes
   extra_module_url:
     - /hacsfiles/material-you-utilities/material-you-utilities.min.js
+    - /hacsfiles/lovelace-card-mod/card-mod.js?hacstag=190927524421
+    - /hacsfiles/Bubble-Card/bubble-pop-up-fix.js
 
 automation: !include automations.yaml
 script: !include scripts.yaml

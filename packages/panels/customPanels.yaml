@@ -10,7 +10,7 @@ custompanels:
       config:
         ingress: core_configurator
     - name: ha_integ
-      sidebar_title: 'Устройства и службы'
+      sidebar_title: 'Устройства'
       sidebar_icon: mdi:devices
       js_url: /api/hassio/app/entrypoint.js
       url_path: 'config/integrations'
@@ -19,7 +19,7 @@ custompanels:
       config:
         ingress: core_configurator  
     - name: ha_auto
-      sidebar_title: 'Автоматизации и сцены'
+      sidebar_title: 'Автоматизации'
       sidebar_icon: mdi:robot
       js_url: /api/hassio/app/entrypoint.js
       url_path: 'config/automation'
