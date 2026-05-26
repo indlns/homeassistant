@@ -1,0 +1,12 @@
+music_bathroom:
+  sequence:
+  - target:
+      entity_id: media_player.homepod_indlns
+    data:
+      artist: Thornhill
+      album: ' Bodies'
+      media_id: Thornhill
+    action: music_assistant.play_media
+  alias: Музыка в ванной
+  description: ''
+  icon: mdi:music
