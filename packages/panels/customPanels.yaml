@@ -20,7 +20,7 @@ custompanels:
         ingress: core_configurator  
     - name: ha_auto
       sidebar_title: 'Автоматизации'
-      sidebar_icon: mdi:robot
+      sidebar_icon: mdi:creation
       js_url: /api/hassio/app/entrypoint.js
       url_path: 'config/automation'
       embed_iframe: true
