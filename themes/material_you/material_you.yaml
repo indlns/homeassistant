@@ -196,6 +196,14 @@ Material You:
   md-sys-typescale-emphasized-label-small-tracking: 0.5px
   modes:
     dark:
+      indlns-weather-card-bg: var(--md-sys-color-primary-container)
+      indlns-lights-card-bg: rgb(74, 58, 24)
+      indlns-material-lights-card-bg: rgb(79, 71, 46)
+      indlns-climate-card-bg: rgb(88, 63, 57)
+      indlns-alarm-card-bg: rgb(52, 73, 50)
+      indlns-cameras-card-bg: rgb(28, 34, 54)
+      indlns-indigo-card-bg: rgb(42, 45, 48)
+      indlns-purple-card-bg: rgb(52, 44, 58)
       md-sys-color-primary: 'var(--md-sys-color-primary-dark, #b5c4ff)'
       md-sys-color-on-primary: 'var(--md-sys-color-on-primary-dark, #1c2d61)'
       md-sys-color-primary-container: 'var(--md-sys-color-primary-container-dark, #344479)'
@@ -252,6 +260,14 @@ Material You:
       disabled-color: 'var(--disabled-color-dark, #000000)'
       state-inactive-color: 'var(--state-inactive-color-dark, #484a4e)'
     light:
+      indlns-weather-card-bg: rgb(237, 240, 254)
+      indlns-lights-card-bg: rgb(252, 239, 205)
+      indlns-material-lights-card-bg: rgb(250, 225, 144)
+      indlns-climate-card-bg: rgb(252, 237, 231)
+      indlns-alarm-card-bg: rgb(227, 245, 224)
+      indlns-cameras-card-bg: rgb(233, 240, 253)
+      indlns-indigo-card-bg: rgb(232, 234, 235)
+      indlns-purple-card-bg: rgb(241, 229, 244)
       md-sys-color-primary: 'var(--md-sys-color-primary-light, #4c5c92)'
       md-sys-color-on-primary: 'var(--md-sys-color-on-primary-light, #ffffff)'
       md-sys-color-primary-container: 'var(--md-sys-color-primary-container-light, #dce1ff)'
@@ -490,13 +506,16 @@ Material You:
   ha-switch-checked-icon-color: var(--md-sys-color-on-primary-container)
   ha-switch-track-state-layer: var(--md-sys-color-on-surface)
   ha-switch-checked-track-state-layer: var(--md-sys-color-primary)
-  checkbox-checked-border-color: var(--md-sys-color-primary)
-  checkbox-checked-icon-color: var(--md-sys-color-on-primary)
-  checkbox-unchecked-border-color: var(--md-sys-color-on-surface-variant)
-  checkbox-unchecked-icon-color: var(--md-sys-color-on-surface)
-  mdc-checkbox-checked-color: var(--checkbox-checked-border-color)
-  mdc-checkbox-ink-color: var(--checkbox-checked-icon-color)
-  mdc-checkbox-unchecked-color: var(--checkbox-unchecked-border-color)
+  ha-checkbox-size: 18px
+  ha-checkbox-border-color: var(--md-sys-color-on-surface-variant)
+  ha-checkbox-border-color-hover: var(--md-sys-color-on-surface)
+  ha-checkbox-background-color: transparent
+  ha-checkbox-background-color-hover: rgba(from var(--md-sys-color-on-surface) r g b / 0.08)
+  ha-checkbox-checked-background-color: var(--md-sys-color-primary)
+  ha-checkbox-checked-background-color-hover: hsl(from var(--md-sys-color-primary) h s calc(l + 4))
+  ha-checkbox-checked-icon-color: var(--md-sys-color-on-primary)
+  ha-checkbox-border-radius: 2px
+  ha-checkbox-border-width: 2px
   mdc-radio-unchecked-color: var(--md-sys-color-on-surface-variant)
   ha-tooltip-arrow-size: 0px
   ha-tooltip-border-radius: var(--md-sys-shape-corner-extra-small)
@@ -506,6 +525,11 @@ Material You:
   ha-tooltip-line-height: var(--md-sys-typescale-body-small-line-height)
   ha-slider-track-size: 24px
   ha-slider-thumb-negative-color: var(--md-sys-color-on-surface-container-low)
+  ha-progress-bar-indicator-color: var(--md-sys-color-primary)
+  ha-progress-bar-indicator-background: var(--md-sys-color-secondary-container)
+  ha-progress-bar-track-color: var(--md-sys-color-secondary-container)
+  ha-progress-bar-track-height: 4px
+  ha-progress-bar-border-radius: 4px
   button-height: 40px
   ha-button-height: 40px
   ha-button-border-radius: calc(var(--ha-button-height))
@@ -590,7 +614,7 @@ Material You:
   app-header-edit-background-color: var(--md-sys-color-surface-container)
   app-header-selection-bar-color: none
   navbar-background: var(--md-sys-color-surface-container)
-  font-family: '"Google Sans Flex", Figtree, "Roboto Flex", Roboto, Noto, sans-serif'
+  font-family: '"Open Sans", Figtree, "Roboto Flex", Roboto, Noto, sans-serif'
   primary-font-family: var(--font-family)
   ha-card-header-font-family: var(--font-family)
   mdc-typography-font-family: var(--font-family)
@@ -620,7 +644,8 @@ Material You:
   mdc-theme-text-hint-on-background: var(--md-sys-color-on-surface-variant)
   mdc-theme-text-icon-on-background: var(--md-sys-color-on-surface-variant)
   ha-color-form-background: var(--md-sys-color-surface-container-highest)
-  ha-color-form-background-hover: rgba(from var(--md-sys-color-on-surface) r g b / 0.08)
+  ha-color-form-background-hover: hsl(from var(--md-sys-color-surface-container-highest) h s calc(l + 4))
+  ha-color-form-background-disabled: rgba(from var(--md-sys-color-on-surface) r g b / 0.04)
   input-background-color: var(--md-sys-color-surface-container-highest)
   input-fill-color: var(--md-sys-color-surface-container-highest)
   input-ink-color: var(--md-sys-color-on-surface)
@@ -666,4 +691,4 @@ Material You:
   map-card-tertiary-color: var(--md-sys-color-tertiary-container)
   map-card-tertiary-text-color: var(--md-sys-color-on-tertiary-container)
   map-card-zoomer-background: var(--md-sys-color-surface-container-highest)
-  version: 5.0.11
+  version: 5.0.12
