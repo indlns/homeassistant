@@ -8,7 +8,7 @@
 ## 👀 Preview
 
 | Dashboard |
-|:--:|
+|:--:|:--:|
 | ![](./screenshots/dashboard_light.jpg) | ![](./screenshots/dashboard_dark.jpg) |
 
 ---
