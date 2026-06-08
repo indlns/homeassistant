@@ -7,7 +7,7 @@
 
 ## 👀 Preview
 
-| Dashboard |
+| Dashboard (Light) | Dashboard (Dark) |
 |:--:|:--:|
 | ![](./screenshots/dashboard_light.jpg) | ![](./screenshots/dashboard_dark.jpg) |
 
