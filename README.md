@@ -61,7 +61,7 @@
 - 📡 **Mosquitto Broker**
 - 🗄️ **MariaDB**
 - 🎥 **go2rtc**
-- 📷 **Scrypted**
+- 📷 **Frigate**
 - 🎵 **Music Assistant**
 - 🗣️ **Piper (TTS)**
 
@@ -73,6 +73,3 @@
   └ with Utilities
 
 ---
-
-## Test
-- Что-то еще? Хм
